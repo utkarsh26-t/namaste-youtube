@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Debouncing..
+
+# If a user is typing fast - the time interval between two consecutive key strokes would be very less(30ms)
+# If a user if typing slow - the time interval between two consecutive key strokes would be high(200ms)
+
+# In case a user is typing fast, it is kind of useless to call API at each & every key stroke
+eg: iphone 14 pro max 
+Performance
+- With debouncing: 3 API call * 1000 = 3000 calls
+- Without Debouncing: 14 API calls * 1000 = 14000 calls
+
+Debouncing with 200ms:
+- This means if after any key stroke, another key stroke is not made for about 200ms, then
+only the API call would be made 
