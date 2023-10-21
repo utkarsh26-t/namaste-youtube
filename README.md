@@ -84,3 +84,12 @@ Performance
 Debouncing with 200ms:
 - This means if after any key stroke, another key stroke is not made for about 200ms, then
 only the API call would be made 
+
+
+### Caching..
+
+-- using redux store
+--if store in array like [i: , iph: , iphone: ]: searching O(n)
+--if store in object like: {i:, iph:, iphone: } : searching O(1)
+## I will store key(searchQuery) value(suggestions) pairs in store: searching O(1)
+

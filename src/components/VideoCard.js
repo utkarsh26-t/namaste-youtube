@@ -18,11 +18,21 @@ const VideoCard = ({video}) => {
   }, []);
 
   const getChannelAvatar = async() => {
-    const data = await fetch(YOUTUBE_CHANNEL_INFO_API + channelId);
-    const json = await data.json();
+    try{
+      const data = await fetch(YOUTUBE_CHANNEL_INFO_API + channelId);
+      const json = await data.json();
 
-    // console.log(json);
-    setChannelAvatar(json?.items[0]?.snippet?.thumbnails?.high?.url)
+      // console.log(json.items[0]);
+      const avatarBasePath = json?.items[0]?.snippet?.thumbnails;
+      setChannelAvatar(
+        avatarBasePath?.high?.url ||
+          avatarBasePath?.medium?.url ||
+          avatarBasePath?.default?.url
+      );
+    }
+    catch(err){
+      console.log(err);
+    }
   }
 
 
@@ -31,7 +41,7 @@ const VideoCard = ({video}) => {
       <div className="p-4">
         <img
           alt="thumbnail"
-          src={thumbnails?.maxres?.url}
+          src={thumbnails?.maxres?.url || thumbnails?.medium?.url}
           className="rounded-2xl w-full mb-4"
         />
         <div className="flex gap-2">

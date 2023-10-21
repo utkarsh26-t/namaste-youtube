@@ -17,7 +17,8 @@ const Sidebar = () => {
 
 
   if(!isMenuOpen){
-    return <SidebarCollapsed/>
+    // return <SidebarCollapsed/>
+    return;
   };
 
   return (

@@ -8,8 +8,11 @@ const SidebarCollapsed = () => {
   return (
     <div className="w-24 px-2">
       <ul>
-        <li className="py-4 rounded-lg hover:bg-stone-800 flex flex-col items-center">
-          <Link to="/">
+        <li>
+          <Link
+            to="/"
+            className="py-4 rounded-lg hover:bg-stone-800 flex flex-col items-center"
+          >
             <span>
               <GoHomeFill />
             </span>
