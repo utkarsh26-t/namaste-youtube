@@ -1,3 +1,5 @@
+import moment from "moment";
+
 let nameList = [
   "Time",
   "Past",
@@ -189,4 +191,23 @@ export const getRandomMessage = (length) => {
     counter += 1;
   }
   return result;
+}
+
+export const getDuration = (duration) => {
+  const d = moment.duration(duration);
+  const mm = d.minutes();
+  const hh = d.hours();
+  const ss = d.seconds();
+
+  let dur = "";
+  if(hh != 0){
+    dur += hh;
+    dur += ":"; 
+  }
+  dur += mm;
+  dur += ":";
+  dur += ss;
+
+  return dur;
+
 }

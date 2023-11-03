@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import moment from "moment";
+import { decode } from "html-entities";
 
 const SearchResult = ({data}) => {
+
+  // console.log(data)
 
     const {thumbnails, description, title, channelTitle, publishedAt} = data?.snippet;
 
@@ -27,24 +30,26 @@ const SearchResult = ({data}) => {
 
       return (
         <Link to={"/watch?v=" + data.id.videoId}>
-          <article className="grid grid-cols-12 my-2">
-            <figure className="col-span-12 sm:col-span-5 md:col-span-4 h-[48vh]">
-              <img
-                className="w-full rounded-2xl h-full"
-                src={
-                  thumbnails?.maxres?.url ||
-                  thumbnails?.high?.url ||
-                  thumbnails?.medium?.url
-                }
-                alt="thumbnail"
-              />
-            </figure>
-            <section className="col-span-12 sm:col-span-7 md:col-span-8 px-4 sm:py-8">
-              <h1 className="text-lg">{title}</h1>
-              <span className="text-xs text-neutral-300">
+          <article className="flex flex-col sm:flex-row w-full mb-4 sm:mb-auto">
+            <img
+              className="sm:w-1/3 sm:rounded-2xl object-cover h-52 sm:h-auto"
+              src={
+                thumbnails?.maxres?.url ||
+                thumbnails?.high?.url ||
+                thumbnails?.medium?.url
+              }
+              alt="thumbnail"
+            />
+            <section className="px-4 grow pt-1 sm:py-8 text-neutral-400 text-xs">
+              <h1 className="text-sm sm:text-lg text-neutral-50">{decode(title)}</h1>
+              <span>{channelTitle}</span>
+              <span> &#8226; </span>
+              <span>
                 {moment(publishedAt).fromNow()}
               </span>
-              <p className="text-xs text-neutral-400 truncate my-2">{description}</p>
+              <p className="hidden sm:block whitespace-pre-wrap my-2">
+                {description}
+              </p>
             </section>
           </article>
         </Link>

@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Body = () => {
   return (
-    <div className="flex bg-black grow">
+    <div className="flex bg-neutral-950 grow pt-4">
       <Sidebar />
       <Outlet />
     </div>

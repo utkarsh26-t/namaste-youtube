@@ -22,28 +22,31 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-72 px-12">
+    <div className="w-72 px-6">
       {/* General section */}
       <section className="border-b-2 border-b-neutral-900 my-2">
         <ul>
           <li>
-            <Link to="/" className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-              <span>
+            <Link
+              to="/"
+              className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800"
+            >
+              <span className="text-xl">
                 <GoHomeFill />
               </span>
               <span>Home</span>
             </Link>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
             <img
               src="https://yt3.googleusercontent.com/Ztglch057ft68XGbmNthj5V2S_7venMsoJwdQ_URqSVrEJv1-jXmyZCt4B7n_9rQ8dmp1M45wQ=s900-c-k-c0x00ffffff-no-rj"
               alt="Shorts"
-              className="h-4"
+              className="h-5"
             />
             <span>Shorts</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <MdOutlineSubscriptions />
             </span>
             <span>Subscriptions</span>
@@ -53,40 +56,40 @@ const Sidebar = () => {
 
       {/* Explore section */}
       <section className="border-b-2 border-b-neutral-900 my-2">
-        <h1>Explore</h1>
+        <h1 className='my-4'>Explore</h1>
         <ul>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <BsFire />
             </span>
             <span>Trending</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <ImNewspaper />
             </span>
             <span>News</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <TbLivePhoto />
             </span>
             <span>Live</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <GiTrophyCup />
             </span>
             <span>Sport</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <IoMusicalNoteOutline />
             </span>
             <span>Music</span>
           </li>
-          <li className="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-800">
-            <span>
+          <li className="flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
+            <span className="text-xl">
               <IoMdBulb />
             </span>
             <span>Learning</span>

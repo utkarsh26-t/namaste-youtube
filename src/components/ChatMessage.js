@@ -1,9 +1,17 @@
 import React from 'react'
 import { BiUserCircle } from "react-icons/bi";
 
+// const userIconColors = [
+//   "text-blue-900",
+//   "text-yellow-400",
+//   "text-teal-400",
+//   "text-cyan-400",
+//   "text-pink-400"
+// ];
+
 const ChatMessage = ({name, text}) => {
   return (
-    <li className="text-sm my-2 px-4 flex gap-2">
+    <li className="text-sm px-4 flex gap-2">
       <span className="text-xl sm:text-2xl text-blue-900">
         <BiUserCircle />
       </span>

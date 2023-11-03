@@ -6,7 +6,7 @@ const CommentsList = ({comments}) => {
   // console.log(comments);
   return (
     <ul>
-      {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
+      {comments?.map(comment => <Comment key={comment.id} comment={comment}/>)}
     </ul>
   );
 }

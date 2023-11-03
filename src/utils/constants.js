@@ -1,5 +1,5 @@
 
-const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
+const GOOGLE_API_KEY = "AIzaSyClz6FO-rgHHdEZFF_mA6QfzZln8UWxVeM";
 
 export  const YOUTUBE_VIDEOS_API =
   `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=48&regionCode=IN&key=${GOOGLE_API_KEY}`
@@ -20,7 +20,7 @@ export const YOUTUBE_VIDEO_COMMENTS_API =
 export const YOUTUBE_SEARCH_RESULTS_API = 
 `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&key=${GOOGLE_API_KEY}&q=`;
 
-export const OFFSET_LIVE_CHAT = 100;
+export const OFFSET_LIVE_CHAT = 75;
 
 export const SHIMMER_CARD_COUNT = 6;
 

@@ -31,7 +31,7 @@ const SearchResultsList = () => {
   if(results?.length === 0) return null;
 
   return (
-    <div className='w-full sm:w-11/12 md:w-4/5 lg:w-8/12 mx-auto'>
+    <div className='w-full sm:w-11/12 md:w-4/5 lg:w-2/3 mx-auto'>
       {results?.map(result => <SearchResult key={result.id.videoId || result.id.channelId} data={result}/>)}
     </div>
   )

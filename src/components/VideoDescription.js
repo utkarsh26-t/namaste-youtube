@@ -24,6 +24,7 @@ const VideoDescription = ({videoId}) => {
       const json = await data.json();
       // console.log(json.items[0]);
       setVideoDetails(json?.items[0]);
+      
     } catch (err) {
       console.log(err);
     }

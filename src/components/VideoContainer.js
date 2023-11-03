@@ -17,7 +17,7 @@ const VideoContainer = () => {
     try{
       const data = await fetch(YOUTUBE_VIDEOS_API);
       const json = await data.json();
-      console.log(json.items[0]);
+      // console.log(json.items[0]);
       setVideos(json.items);
     }
     catch(err){
@@ -26,7 +26,7 @@ const VideoContainer = () => {
   }
 
   return videos.length === 0? <ShimmerMain/> : (
-    <div className={`grid ${isMenuOpen? "grid-cols-3" : "grid-cols-4"}`}>
+    <div className={`grid ${isMenuOpen? "grid-cols-3":"grid-cols-4"}`}>
       {/* {videos[0] && <AdVideoCard video={videos[0]}/>} */}
       {videos?.map(video => <VideoCard key={video.id} video={video}/>)}
     </div>

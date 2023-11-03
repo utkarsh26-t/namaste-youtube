@@ -79,7 +79,7 @@ const Head = () => {
 
 
   return (
-    <div className="bg-black p-2 grid grid-cols-6">
+    <div className="bg-neutral-950 p-2 grid grid-cols-6">
       {/* Logo & hamburger section */}
       <div className="flex sm:gap-6 items-center">
         <span
@@ -95,7 +95,10 @@ const Head = () => {
       </div>
 
       {/* Search section */}
-      <div className="col-span-5 sm:col-span-4 flex justify-center relative">
+      <form
+        className="col-span-5 sm:col-span-4 flex justify-center relative"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <input
           type="text"
           className="sm:w-1/2 rounded-l-full py-2 px-4 focus:outline-none focus:border-blue-900 border-2 border-neutral-900 bg-black"
@@ -106,7 +109,10 @@ const Head = () => {
         />
 
         <Link to={"/results?search_query=" + searchQuery}>
-          <button className="h-full rounded-r-full px-4 text-xl bg-neutral-900 border-2 border-neutral-900">
+          <button
+            type="submit"
+            className="h-full rounded-r-full px-4 text-xl bg-neutral-900 border-2 border-neutral-900"
+          >
             <AiOutlineSearch />
           </button>
         </Link>
@@ -115,7 +121,7 @@ const Head = () => {
         {showSuggestions && (
           <SearchSuggestions searchSuggestions={searchSuggestions} />
         )}
-      </div>
+      </form>
 
       {/* Nav icons */}
       <div className="hidden sm:flex sm:gap-6 items-center text-2xl justify-end">
