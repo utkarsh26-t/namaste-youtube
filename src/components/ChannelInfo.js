@@ -12,7 +12,7 @@ const ChannelInfo = ({channelId}) => {
     const getChannelDetails = async() => {
         const data = await fetch(YOUTUBE_CHANNEL_INFO_API+channelId);
         const json = await data.json();
-        console.log(json.items[0]);
+        // console.log(json.items[0]);
         setChannelDetails(json.items[0]);
     }
 

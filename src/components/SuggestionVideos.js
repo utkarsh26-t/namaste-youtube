@@ -6,7 +6,6 @@ import SearchResult from './SearchResult';
 const SuggestionVideos = ({videoTitle}) => {
 
   const [suggVds, setSuggVds] = useState([]);
-  console.log(videoTitle)
 
   useEffect(() => {
     getSuggestionVideos();
@@ -14,6 +13,7 @@ const SuggestionVideos = ({videoTitle}) => {
 
   const getSuggestionVideos = async() => {
     try {
+      console.log(videoTitle);
       const data = await fetch(YOUTUBE_SEARCH_RESULTS_API + videoTitle);
       const json = await data.json();
       // console.log(json);

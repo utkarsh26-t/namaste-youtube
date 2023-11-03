@@ -12,6 +12,7 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const videoId = searchParams.get("v");
+  // const [videoTitle, setVideoTitle] = useState(null);
 
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const WatchPage = () => {
           <iframe
             width="100%"
             height="100%"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=0`}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -38,7 +39,7 @@ const WatchPage = () => {
         </section>
 
         {/* Video description section */}
-        <VideoDescription videoId={videoId}/>
+        <VideoDescription videoId={videoId} />
 
         {/* Comments on video section */}
         <CommentsSection videoId={videoId} />
@@ -47,7 +48,7 @@ const WatchPage = () => {
       {/* Right section(Containing related Videos) */}
       <div className="col-span-12 lg:col-span-4 mx-2 sm:mx-4">
         <LiveChat />
-        {/* <SuggestionVideos videoTitle={videoTitle}/> */}
+        {/* <SuggestionVideos videoTitle={videoTitle} /> */}
       </div>
     </div>
   );
