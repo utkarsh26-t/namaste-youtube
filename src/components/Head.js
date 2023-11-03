@@ -88,14 +88,14 @@ const Head = () => {
         >
           <RxHamburgerMenu />
         </span>
-        <span>
+        <Link to="/">
           <img
             src={ytLogo}
             alt="Youtube"
             className="h-10 hidden md:block rounded shadow-lg"
           />
           <img src={ytLogoMobile} alt="Youtube" className="h-10 md:hidden" />
-        </span>
+        </Link>
       </div>
       {/* Search section */}
       <form
