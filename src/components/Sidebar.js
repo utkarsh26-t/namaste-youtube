@@ -39,9 +39,9 @@ const Sidebar = () => {
           </li>
           <li className="w-44 mx-auto sm:w-auto flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
             <img
-              src="https://yt3.googleusercontent.com/Ztglch057ft68XGbmNthj5V2S_7venMsoJwdQ_URqSVrEJv1-jXmyZCt4B7n_9rQ8dmp1M45wQ=s900-c-k-c0x00ffffff-no-rj"
+              src="https://i.pinimg.com/564x/17/d2/18/17d21878c22fe49e7e4752eecaa36541.jpg"
               alt="Shorts"
-              className="h-5"
+              className="h-5 rounded"
             />
             <span>Shorts</span>
           </li>
