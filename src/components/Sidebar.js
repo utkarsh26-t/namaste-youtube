@@ -7,6 +7,7 @@ import {TbLivePhoto} from "react-icons/tb"
 import { GiTrophyCup } from "react-icons/gi";
 import {IoMusicalNoteOutline} from "react-icons/io5"
 import {IoMdBulb} from "react-icons/io"
+import {SiGradleplaypublisher} from "react-icons/si"
 import { useSelector } from 'react-redux';
 import SidebarCollapsed from './SidebarCollapsed'
 import {Link} from "react-router-dom"
@@ -38,11 +39,9 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="w-44 mx-auto sm:w-auto flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
-            <img
-              src="https://i.pinimg.com/564x/17/d2/18/17d21878c22fe49e7e4752eecaa36541.jpg"
-              alt="Shorts"
-              className="h-5 rounded"
-            />
+            <span className='text-xl'>
+              <SiGradleplaypublisher />
+            </span>
             <span>Shorts</span>
           </li>
           <li className="w-44 mx-auto sm:w-auto flex items-center gap-6 p-2 rounded-lg hover:bg-neutral-800">
