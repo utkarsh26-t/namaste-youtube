@@ -3,8 +3,8 @@ import {RxHamburgerMenu} from "react-icons/rx"
 import {AiOutlineSearch} from "react-icons/ai"
 import { BiUserCircle, BiVideoPlus } from "react-icons/bi";
 import {IoIosNotificationsOutline} from "react-icons/io"
-import ytLogo from "../assets/img/ytLogo.png"
-import ytLogoMobile from "../assets/img/ytLogoMobile.png"
+import ytLogo from "../assets/img/ytLogo.webp"
+import ytLogoMobile from "../assets/img/ytLogoMobile.webp"
 import { useDispatch, useSelector } from 'react-redux';
 import {toggleMenu} from "../utils/appSlice";
 import { YOUTUBE_SEARCH_SUGGESTIONS_API} from '../utils/constants';
@@ -89,7 +89,7 @@ const Head = () => {
           <RxHamburgerMenu />
         </span>
         <span>
-          <img src={ytLogo} alt="Youtube" className="h-5 hidden md:block" />
+          <img src={ytLogo} alt="Youtube" className="h-10 hidden md:block rounded shadow-lg" />
           <img src={ytLogoMobile} alt="Youtube" className="h-5 md:hidden" />
         </span>
       </div>

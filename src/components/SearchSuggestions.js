@@ -7,7 +7,7 @@ const SearchSuggestions = ({searchSuggestions}) => {
 
   return (
     <section
-      className="z-10 absolute top-12 bg-neutral-900 w-1/2 rounded-2xl py-4 border-b-2 border-red-500
+      className="z-10 absolute top-12 bg-neutral-900 w-1/2 rounded-2xl py-4 border-b-2 border-fuchsia-400
      shadow-lg shadow-neutral-800"
     >
       <ul>
