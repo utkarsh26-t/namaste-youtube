@@ -26,7 +26,7 @@ const VideoContainer = () => {
   }
 
   return videos.length === 0? <ShimmerMain/> : (
-    <div className={`grid ${isMenuOpen? "grid-cols-3":"grid-cols-4"}`}>
+    <div className={`grid ${isMenuOpen? "md:grid-cols-2 xl:grid-cols-3":"sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"}`}>
       {/* {videos[0] && <AdVideoCard video={videos[0]}/>} */}
       {videos?.map(video => <VideoCard key={video.id} video={video}/>)}
     </div>

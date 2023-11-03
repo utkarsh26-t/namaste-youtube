@@ -79,7 +79,7 @@ const Head = () => {
 
 
   return (
-    <div className="bg-neutral-950 p-2 grid grid-cols-6">
+    <div className="bg-neutral-950 p-2 flex">
       {/* Logo & hamburger section */}
       <div className="flex sm:gap-6 items-center">
         <span
@@ -89,19 +89,22 @@ const Head = () => {
           <RxHamburgerMenu />
         </span>
         <span>
-          <img src={ytLogo} alt="Youtube" className="h-10 hidden md:block rounded shadow-lg" />
-          <img src={ytLogoMobile} alt="Youtube" className="h-5 md:hidden" />
+          <img
+            src={ytLogo}
+            alt="Youtube"
+            className="h-10 hidden md:block rounded shadow-lg"
+          />
+          <img src={ytLogoMobile} alt="Youtube" className="h-10 md:hidden" />
         </span>
       </div>
-
       {/* Search section */}
       <form
-        className="col-span-5 sm:col-span-4 flex justify-center relative"
+        className="grow px-2 flex justify-center relative"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           type="text"
-          className="sm:w-1/2 rounded-l-full py-2 px-4 focus:outline-none focus:border-blue-900 border-2 border-neutral-900 bg-black"
+          className="rounded-l-full w-full max-w-lg px-4 focus:outline-none focus:border-blue-900 border-2 border-neutral-900 bg-black"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onBlur={() => setShowSuggestions(false)}
@@ -122,9 +125,8 @@ const Head = () => {
           <SearchSuggestions searchSuggestions={searchSuggestions} />
         )}
       </form>
-
       {/* Nav icons */}
-      <div className="hidden sm:flex sm:gap-6 items-center text-2xl justify-end">
+      <div className="hidden sm:flex sm:gap-6 items-center text-2xl">
         <span className="rounded-full hover:bg-neutral-800 p-2 cursor-pointer">
           <BiVideoPlus />
         </span>

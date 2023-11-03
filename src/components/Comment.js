@@ -51,15 +51,16 @@ const Comment = ({comment}) => {
         </div>
 
         {replies.length > 0 && (
-          <button
-            onClick={toggleBtnHandler}
-            className="flex items-center gap-2 text-blue-400 font-semibold text-sm rounded-full hover:bg-blue-950 px-4 py-2 my-1"
-          >
-            <span>{showReplies ? <AiFillCaretUp /> : <AiFillCaretDown />}</span>
-            <span>{replies.length} replies</span>
-          </button>
+            <button
+              onClick={toggleBtnHandler}
+              className="flex items-center gap-2 text-blue-400 font-semibold text-sm rounded-full hover:bg-blue-950 px-4 py-2 my-1"
+            >
+              <span>
+                {showReplies ? <AiFillCaretUp /> : <AiFillCaretDown />}
+              </span>
+              <span>{replies.length} replies</span>
+            </button>
         )}
-
         {/* Replies on this comment (It will be comments list only)*/}
         {showReplies && <CommentsList comments={replies} />}
       </div>

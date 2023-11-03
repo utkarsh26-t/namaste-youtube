@@ -29,7 +29,7 @@ const ChannelInfo = ({channelId}) => {
         alt="avatar"
       />
       <div>
-        <h5 className="font-medium">{channelDetails?.snippet?.title}</h5>
+        <h5 className="text-sm sm:text-base font-medium">{channelDetails?.snippet?.title}</h5>
         <h6 className="text-xs text-neutral-300">
           {Intl.NumberFormat("en", { notation: "compact" }).format(
             channelDetails?.statistics?.subscriberCount

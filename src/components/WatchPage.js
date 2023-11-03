@@ -5,14 +5,12 @@ import { useSearchParams } from 'react-router-dom'
 import CommentsSection from './CommentsSection'
 import VideoDescription from './VideoDescription'
 import LiveChat from './LiveChat'
-import SuggestionVideos from './SuggestionVideos'
 
 const WatchPage = () => {
 
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const videoId = searchParams.get("v");
-  // const [videoTitle, setVideoTitle] = useState(null);
 
 
   useEffect(() => {
@@ -48,7 +46,6 @@ const WatchPage = () => {
       {/* Right section(Containing related Videos) */}
       <div className="col-span-12 lg:col-span-4 mx-2 sm:mx-4">
         <LiveChat />
-        {/* <SuggestionVideos videoTitle={videoTitle} /> */}
       </div>
     </div>
   );

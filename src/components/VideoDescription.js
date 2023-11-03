@@ -39,7 +39,7 @@ const VideoDescription = ({videoId}) => {
         {videoDetails?.snippet?.title}
       </h1>
 
-      <div className="flex flex-col sm:flex-row  justify-between py-2 w-11/12 mx-auto sm:w-full">
+      <div className="flex flex-col md:flex-row  justify-between py-2 w-11/12 mx-auto sm:w-full">
         <ChannelInfo channelId={videoDetails?.snippet?.channelId} />
         <div className="text-xs sm:text-sm flex flex-wrap items-center gap-2 sm:gap-1 md:gap-2">
           <button className="flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2">

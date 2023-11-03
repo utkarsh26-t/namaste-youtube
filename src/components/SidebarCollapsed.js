@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 
 const SidebarCollapsed = () => {
   return (
-    <div className="w-24 px-2">
+    <div className="w-24">
       <ul>
         <li>
           <Link

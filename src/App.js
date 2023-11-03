@@ -7,7 +7,6 @@ import { createBrowserRouter,  Outlet } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
 import WatchPage from './components/WatchPage';
 import SearchResultsList from "./components/SearchResultsList"
-
 // const appRouter = createBrowserRouter([
 //   {
 //     path: "/",
