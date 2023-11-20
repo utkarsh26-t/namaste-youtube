@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {useSearchParams} from "react-router-dom"
 import {YOUTUBE_SEARCH_RESULTS_API} from "../utils/constants"
 import SearchResult from './SearchResult';
+import SearchResultListShimmer from './SearchResultListShimmer';
 
 const SearchResultsList = () => {
 
@@ -28,7 +29,7 @@ const SearchResultsList = () => {
     
   }
 
-  if(results?.length === 0) return null;
+  if(results?.length === 0) return <SearchResultListShimmer/>;
 
   return (
     <div className='w-full sm:w-11/12 md:w-4/5 lg:w-2/3 mx-auto'>
